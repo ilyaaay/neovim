@@ -6,6 +6,12 @@ return {
         rust_analyzer = {
           mason = false,
         },
+        tsserver = {
+          on_attach = function(client)
+            client.server_capabilities.documentFormattingProvider = false
+          end,
+        },
+        biome = {},
       },
     },
   },
